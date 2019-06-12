@@ -1,0 +1,44 @@
+% Compilar com o XeLaTeX
+\documentclass[a5paper,twoside,openany,10pt]{memoir}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{memhfixc}
+
+% Set font to Adobe Palatino
+\usepackage{fontspec}
+\usepackage{mathpazo}
+\setmainfont
+     [ BoldFont       = texgyrepagella-bold.otf ,
+       ItalicFont     = texgyrepagella-italic.otf ,
+       BoldItalicFont = texgyrepagella-bolditalic.otf ]
+     {texgyrepagella-regular.otf}
+
+%\renewcommand{\rmdefault}{ppl}
+%\renewcommand{\sfdefault}{phv}
+%\renewcommand{\ttdefault}{pcr}
+
+\newcommand{\mailto}[1]{\href{mailto:{#1}}{#1}}
+\newcommand{\link}[2]{\href{#2}{#1}}
+
+\title{PSI3211 - Circuitos I}
+\author{G. Queiroz\\<\mailto{gabrieljvnq@gmail.com}>}
+\date{2019}
+
+\begin{document}
+\maketitle
+
+$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{a}$
+
+Luís argüia à Júlia que «brações, fé, chá, óxido, pôr, zângão» eram palavras do português.
+
+À noite, vovô Kowalsky vê o ímã cair no pé do pinguim queixoso e vovó põe açúcar no chá de tâmaras do jabuti feliz. (90 letras, incluindo todas as letras acentuadas)
+
+\begin{center}
+\includegraphics[width=1cm]{CC-BY-SA.ps}\\
+\footnotesize
+Documento sob a \link{Licença Creative Commons Atribuição-CompartilharIgual}{https://creativecommons.org/licenses/by-sa/4.0/}.
+\end{center}
+
+\end{document}
