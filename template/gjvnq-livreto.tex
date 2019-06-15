@@ -1,0 +1,91 @@
+% Compilar com o XeLaTeX
+\documentclass{gjvnq-livreto}
+
+\title{Classe \LaTeX: gjvnq-livreto}
+\author{G. Queiroz\\<\mailto{gabrieljvnq@gmail.com}>}
+\date{2019}
+
+\begin{document}
+\maketitle
+
+$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{a}$
+
+Luís argüia à Júlia que «brações, fé, chá, óxido, pôr, zângão» eram palavras do português.
+
+À noite, vovô Kowalsky vê o ímã cair no pé do pinguim queixoso e vovó põe açúcar no chá de tâmaras do jabuti feliz. (90 letras, incluindo todas as letras acentuadas)
+
+% \begin{center}
+% \includegraphics[width=1cm]{CC-BY-SA.ps}\\
+% \footnotesize
+% Documento sob a \link{Licença Creative Commons Atribuição-CompartilharIgual}{https://creativecommons.org/licenses/by-sa/4.0/}.
+% \end{center}
+
+\chapter{Básico}
+
+\section{Letras e Acentos}
+
+As letras do alfabeto da língua portuguesa, incluindo os acentos, funcionam como se espera:
+
+\begin{latexExample}
+Luís argüia à Júlia que «brações, fé, chá, óxido, pôr, zângão» eram palavras do português.
+\end{latexExample}
+
+As letras gregas também podem ser digitadas diretamente: α, β, γ, δ, ε, ζ, η, θ, ι, κ, λ, μ, μ, ν, ξ, ο, π, ρ, σ, τ, υ, φ, χ, ψ, ω, Α, Β, Γ, Δ, Ε, Ζ, Η, Θ, Ι, Κ, Λ, Μ, Ν, Ξ, Ο, Π, Ρ, Σ, Τ, Υ, Φ, Χ, Ψ, Ω, ς, φ.
+
+\section{Matemática}
+
+\begin{latexExample}
+Prove que:
+\begin{equation}
+e^{\pi i} = -1
+\end{equation}
+\end{latexExample}
+
+\begin{latexExample}
+Prove que a soma dos $n$ primeiros termos de uma P.G. com razão $q$, pode ser expressa como:
+\begin{equation}
+S_n = \frac{a_1(1-q^n)}{1-q}
+\end{equation}
+\end{latexExample}
+
+\subsection{Letras gregas}
+
+\begin{latexExample}
+% \iota I; \kappa K; \lambda \Lambda; \mu M; \nu N; \xi\Xi; o O; \pi \Pi; \rho\varrho P; \sigma \Sigma; \tau T; \upsilon \Upsilon; \phi \varphi \Phi; \chi X; \psi \Psi; \omega \Omega$
+\end{latexExample}
+
+\begin{codeBox}
+\begin{longtable}{ll|ll}
+\verb|\alpha| & $\alpha$ & \verb|\beta| & $\beta$ \\
+\verb|\gamma| & $\gamma$ & \verb|\Gamma| & $\Gamma$ \\
+\verb|\delta| & $\delta$ & \verb|\Delta| & $\Delta$ \\
+\verb|\epsilon| & $\epsilon$ & \verb|\varepsilon| & $\varepsilon$ \\
+\verb|\zeta| & $\zeta$ & \verb|\eta| & $\eta$ \\
+\verb|\theta| & $\theta$ & \verb|\vartheta| & $\vartheta$\\
+\verb|\Theta| & $\Theta$ & \verb|\iota| & $\iota$ \\
+\verb|\kappa| & $\kappa$ & \verb|\lambda| & $\lambda$ \\
+\verb|\Lambda| & $\Lambda$ & \verb|\mu| & $\mu$ \\
+\verb|\nu| & $\nu$ & \verb|\xi| & $\xi$ \\
+\verb|\Xi| & $\Xi$ & \verb|\pi| & $\pi$ \\
+\verb|\Pi| & $\Pi$ & \verb|\rho| & $\rho$ \\
+\verb|\varrho| & $\varrho$ & \verb|\sigma| & $\sigma$ \\
+\verb|\Sigma| & $\Sigma$ & \verb|\tau| & $\tau$ \\
+\verb|\upsilon| & $\upsilon$ & \verb|\Upsilon| & $\Upsilon$ \\
+\verb|\phi| & $\phi$ & \verb|\varphi| & $\varphi$ \\
+\verb|\Phi| & $\Phi$ & \verb|\chi| & $\chi$ \\
+\verb|\psi| & $\psi$ & \verb|\Psi| & $\Psi$ \\
+\verb|\omega| & $\omega$ & \verb|\Omega| & $\Omega$ \\
+\end{longtable}
+\end{codeBox}
+
+
+
+
+\begin{latexExample}
+This is a \LaTeX\ example:
+\begin{equation}
+\sum\limits_{i=1}^n i = \frac{n(n+1)}{2}.
+\end{equation}
+\end{latexExample}
+
+\end{document}
