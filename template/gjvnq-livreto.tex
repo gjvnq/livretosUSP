@@ -1,5 +1,6 @@
 % Compilar com o XeLaTeX
 \documentclass{gjvnq-livreto}
+\usepackage{ccicons}
 
 \title{Classe \LaTeX: gjvnq-livreto}
 \author{G. Queiroz\\<\mailto{gabrieljvnq@gmail.com}>}
@@ -7,6 +8,19 @@
 
 \begin{document}
 \maketitle
+\vspace{10em}
+\begin{center}
+\BeginAccSupp{ActualText=CC-BY-SA}
+\ccbysa
+\EndAccSupp{}
+
+\footnotesize
+\link{Licença Creative Commons Atribuição-CompartilharIgual 4.0}{https://creativecommons.org/licenses/by-sa/4.0/}
+\end{center}
+\clearpage
+\tableofcontents
+\clearpage
+
 
 $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{a}$
 
@@ -30,30 +44,38 @@ As letras do alfabeto da língua portuguesa, incluindo os acentos, funcionam com
 Luís argüia à Júlia que «brações, fé, chá, óxido, pôr, zângão» eram palavras do português.
 \end{latexExample}
 
-As letras gregas também podem ser digitadas diretamente: α, β, γ, δ, ε, ζ, η, θ, ι, κ, λ, μ, μ, ν, ξ, ο, π, ρ, σ, τ, υ, φ, χ, ψ, ω, Α, Β, Γ, Δ, Ε, Ζ, Η, Θ, Ι, Κ, Λ, Μ, Ν, Ξ, Ο, Π, Ρ, Σ, Τ, Υ, Φ, Χ, Ψ, Ω, ς, φ.
+As seguintes letras gregas também podem ser digitadas diretamente: α, β, γ, δ, ε, ζ, η, θ, ι, κ, λ, μ, ν, ξ, ο, π, ρ, σ, τ, υ, φ, χ, ψ, ω, Α, Β, Γ, Δ, Ε, Ζ, Η, Θ, Ι, Κ, Λ, Μ, Ν, Ξ, Ο, Π, Ρ, Σ, Τ, Υ, Φ, Χ, Ψ, Ω, ς, φ.
+
+\subsection{Outro Símbolos de Texto}
+\begin{codeBox}
+\begin{longtable}{lll}
+Real & \verb|\BRL| & \BRL \\
+Euro & \verb|\EUR| & \EUR \\
+Porcento & \verb|\%| & \% \\
+Número & \verb|\textnumero| & \textnumero \\
+Interrobang & \verb|\textinterrobang| & \textinterrobang \\
+Interrobang invertido & \verb|\textinterrobangdown| & \textinterrobangdown \\
+\end{longtable}
+\end{codeBox}
 
 \section{Matemática}
 
-\begin{latexExample}
-Prove que:
-\begin{equation}
-e^{\pi i} = -1
-\end{equation}
-\end{latexExample}
+% \begin{latexExample}
+% Prove que:
+% \begin{equation}
+% e^{\pi i} = -1
+% \end{equation}
+% \end{latexExample}
 
-\begin{latexExample}
-Prove que a soma dos $n$ primeiros termos de uma P.G. com razão $q$, pode ser expressa como:
-\begin{equation}
-S_n = \frac{a_1(1-q^n)}{1-q}
-\end{equation}
-\end{latexExample}
+% \begin{latexExample}
+% Prove que a soma dos $n$ primeiros termos de uma P.G. com razão $q$, pode ser expressa como:
+% \begin{equation}
+% S_n = \frac{a_1(1-q^n)}{1-q}
+% \end{equation}
+% \end{latexExample}
 
-\subsection{Letras gregas}
-
-\begin{latexExample}
-% \iota I; \kappa K; \lambda \Lambda; \mu M; \nu N; \xi\Xi; o O; \pi \Pi; \rho\varrho P; \sigma \Sigma; \tau T; \upsilon \Upsilon; \phi \varphi \Phi; \chi X; \psi \Psi; \omega \Omega$
-\end{latexExample}
-
+\subsection{Símbolos Especiais}
+\subsubsection{Letras Gregas}
 \begin{codeBox}
 \begin{longtable}{ll|ll}
 \verb|\alpha| & $\alpha$ & \verb|\beta| & $\beta$ \\
@@ -78,8 +100,85 @@ S_n = \frac{a_1(1-q^n)}{1-q}
 \end{longtable}
 \end{codeBox}
 
+\subsubsection{Outro Símbolos Matemáticos}
+\begin{codeBox}
+\begin{longtable}{ll|l}
+F.E.M (Força Eletro-Motriz) & \verb|\emf| & $\emf$ \\
+Volume (V cortado) & \verb|\vol| & $\vol$ \\
+Volume de Controle & \verb|\vc| & $\vc$ \\
+Menor ou igual & \verb|\le| & $\le$ \\
+Maior ou igual & \verb|\ge| & $\ge$ \\
+União de conjunto & \verb|\cup| & $\cup$ \\
+Disjunção de conjunto & \verb|\cap| & $\cap$ \\
+Mais ou menos & \verb|\pm| & $\pm$ \\
+Menos ou mais & \verb|\mp| & $\mp$ \\
+Cunha (\emph{wedge}), e & \verb|\wedge| & $\wedge$ \\
+Ou & \verb|\vee| & $\vee$ \\
+Pertence & \verb|\in| & $\in$ \\
+Não pertence & \verb|\notin| & $\notin$ \\
+Contido em & \verb|\subset| & $\subset$ \\
+Não contido em & \verb|\nsubset| & $\nsubset$ \\
+\end{longtable}
+\end{codeBox}
+
+\subsection{Matrizes}
+
+Matrizes podem ser inseridas usando o ambiente \verb|matrix| e suas variantes: \verb|p| para parênteses, \verb|b| para colchetes (do inglês \emph{brackets}), \verb|v| para barras verticais (útil para determinantes) e \verb|V| para barras verticais duplas.
+
+\begin{latexExampleSide}
+\[ \begin{matrix} 
+a & b \\
+c & d 
+\end{matrix} \]
+\end{latexExampleSide}
+
+\begin{latexExampleSide}
+\[ \begin{pmatrix} 
+a & b \\
+c & d 
+\end{pmatrix} \]
+\end{latexExampleSide}
+
+\begin{latexExampleSide}
+\[ \begin{bmatrix} 
+a & b \\
+c & d 
+\end{bmatrix} \]
+\end{latexExampleSide}
+
+\begin{latexExampleSide}
+\[ \begin{vmatrix} 
+a & b \\
+c & d 
+\end{vmatrix} \]
+\end{latexExampleSide}
+
+\begin{latexExampleSide}
+\[ \begin{Vmatrix} 
+a & b \\
+c & d 
+\end{Vmatrix} \]
+\end{latexExampleSide}
+
+O alinhamento dos elementos pode ser feito utilizando os ambientes de matriz terminados em \verb|*| (asterisco) seguidos de um especificador de alinhamento: \verb|[r]| para direita e \verb|[l]| para esquerda.
+
+\begin{latexExampleSide}
+\[ \begin{bmatrix*}[r]
+-7 & 0 \\
+0 & 5 
+\end{bmatrix*} \]
+\end{latexExampleSide}
+
+O alinhamento de números complexos é um pouco mais, bem... complexo. Utilizamos o comando \verb|\phantom| para colocar a unidade imaginária de forma ``invisível''.
+
+\begin{latexExampleSide}
+\[ \begin{bmatrix*}[r]
+-7i & 0i \\
+0\phantom{i} & 5\phantom{i} 
+\end{bmatrix*} \]
 
 
+\end{latexExampleSide}
 
 \begin{latexExample}
 This is a \LaTeX\ example:
